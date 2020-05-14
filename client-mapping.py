@@ -58,7 +58,7 @@ for client in clients:
     hostname = client.get('hostname')
     name = client.get('name', hostname)
     if not args.mixedcase:
-        name = name.lower()
+        name = name.lower() if name is not None else name
     mac = client['mac']
 
     if ip <> "Unknown":
